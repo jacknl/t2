@@ -1,0 +1,279 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	position: absolute;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #666;
+	font-family: Arial;
+	color: #FFF;	
+}
+
+body>p{
+	position: relative;
+	text-align: center;
+	margin: 0px;
+	top: 50px;
+	font-size: 50px;
+	font-weight: bold;
+	text-shadow: 0px 0px 10px #222;
+}
+
+.pesquisa{
+	position: relative;
+	width: 472px;
+	left: 50%;
+	top: 100px;
+	margin-left: -236px;
+}
+
+.pesquisa input:FIRST-CHILD{
+	border: solid 1px #222;
+	border-radius: 5px;
+	padding: 10px;
+	width: 450px;
+	margin: 0px;
+	background-color: #FFF;
+	cursor: auto;
+}
+
+.pesquisa .pesquisa_button{
+	margin: 10px 136px 0px 136px;
+	border: solid 1px #222;
+	border-radius: 5px;
+	padding: 10px 40px;
+	width: 200px;
+	background-color: #999;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.pesquisa .pesquisa_button:hover{
+	background-color: #333;
+	border: solid 1px #111;
+	color: #999;
+}
+
+.inicio>p{
+	min-width: 900px;
+	width: 100%;
+	display: table;	 
+	position: relative;
+	text-align: center;
+	margin: 0px;
+	font-size: 50px;
+	font-weight: bold;
+	text-shadow: 0px 0px 10px #222;
+	padding: 10px 0px 20px 0px;
+	background-color: #555;
+	border-bottom: solid 1px #444;
+}
+
+.content{
+	width: 1000px;
+	display: table;
+	margin: 55px auto 0px auto;
+}
+
+.content .letra{
+	background-color: #777;
+	padding: 10px;
+	float: left;
+	border: solid 1px #555;
+	border-radius: 5px 0px 0px 5px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	width: 478px;
+	text-align: center;
+}
+
+.content p{
+	margin: 1px;	
+}
+
+.content .traducao{
+	background-color: #777;
+	padding: 10px;
+	float: left;
+	border: solid 1px #555;
+	margin-bottom: 10px;
+	border-radius: 0px 5px 5px 0px;
+	margin-right: 10px;
+	width: 506px;
+	display: none;
+}
+
+.content .video{
+	float: right;
+	width: 480px;
+	margin-right: 10px;
+}
+
+.content .video iframe{
+	float: right;
+	border: 0px;
+}
+
+.info{
+	float: right;	
+	width: 451px;
+	padding: 19px 9px 19px 19px;
+	margin: 0px 9px 10px 0px;
+	background-color: #777;
+	border: solid 1px #555;
+	border-radius: 0px 0px 5px 0px;
+	position: relative;
+	left: -1px;
+}
+
+.info div{
+	float: right;
+	margin-top: 10px;
+	border: solid 1px #222;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #999;
+	font-size: 15px;
+	cursor: pointer;
+	display: table;
+}
+
+.info div:hover{
+	background-color: #333;
+	border: solid 1px #111;
+	color: #999;
+}
+
+.campos_inicio{
+	position: absolute;
+	width: 1000px;
+	margin-top: -42px;
+}
+
+.campos_inicio .pesquisar{
+	float: right;
+	border: solid 1px #222;
+	border-radius: 5px;
+	padding: 10px;
+	width: 250px;
+	margin: 0px;
+	background-color: #FFF;
+	cursor: auto;
+}
+
+.campos_inicio .pesquisar_botao{
+	margin: 0px 10px 0px 10px;
+	float: right;
+	border: solid 1px #222;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #999;
+	font-size: 15px;
+	cursor: pointer;
+	height: 38px;
+}
+
+.campos_inicio .traducao_botao, .campos_inicio .botao_menos_info{
+	border: solid 1px #222;
+	border-radius: 5px;
+	background-color: #999;
+	font-size: 15px;
+	cursor: pointer;
+	height: 28px;	
+	padding: 10px 20px 0px 20px;
+	margin: 0px 3px 0px 10px;	
+	float: left;
+}
+
+.campos_inicio .botao_menos_info{
+	display: none;
+}
+
+.campos_inicio .traducao_botao:hover, .campos_inicio .pesquisar_botao:hover, .campos_inicio .botao_menos_info:hover{
+	background-color: #333;
+	border: solid 1px #111;
+	color: #999;
+}
+
+.logado{
+	position: absolute;
+	width: 1000px;
+	left: 50%;
+	margin-left: -520px;
+	top: 0px;
+	display: table;
+	height: 80px;
+
+}
+
+.logado .exibe{
+	height: 29px;
+	border: solid 1px #444;
+	border-top: 0px;
+	float: right;
+	overflow: hidden;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.logado .exibe div{
+	margin: 0px;
+	padding: 5px 10px;
+	background-color: #777;
+	cursor: pointer;
+	border-top: 0px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.exibe .nome{	
+}
+
+.logado a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.logado .exibe div:hover{
+	background-color: #666;	
+}
+
+.curtir, .tweetar{
+	float: left;
+	height: 20px;
+	margin: 9px 4px 9px 10px;
+}
+
+.informacoes{
+	border-radius: 5px;
+	border: solid 1px #555;
+	margin: 0pcx 10px 10px 10px;
+	padding: 20px;
+	background-color: #777;
+	display: none;
+}
+
+.informacoes p{
+	margin: 0px;
+}
+
+.informacoes img{
+	margin: auto;
+	width: 252px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.informacoes>div{
+	margin: 0px auto 10px auto;	
+	font-size: 35px;
+	display: table;
+}
+
+.nada{
+	margin: 30px auto;
+	font-size: 40px;
+	color: #BBB;
+	display: table;
+}
+
