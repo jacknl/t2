@@ -27,6 +27,7 @@ $(document).ready(function(){
 			//mostra as div que tem o video, letra e info
 			$('.video').css({'display': 'block'});
 			$('.info').css({'display': 'block'});
+			$('.download').css({'display': 'block'});
 			//esconde as div que tem a traducao e letra
 			$('.traducao').css({'display': 'none'});
 			$('.letra').css({
@@ -39,6 +40,7 @@ $(document).ready(function(){
 			//mostra as div que tem o video, letra e info
 			$('.video').css({'display': 'none'});
 			$('.info').css({'display': 'none'});
+			$('.download').css({'display': 'none'});
 			//esconde as div que tem a traducao e letra
 			$('.traducao').css({'display': 'block'});
 			$('.letra').css({
@@ -54,6 +56,7 @@ $(document).ready(function(){
 		$('.video').css({'display': 'none'});
 		$('.info').css({'display': 'none'});
 		$('.letra').css({'display': 'none'});
+		$('.download').css({'display': 'none'});
 		$('.informacoes').css({'display': 'block'});
 		$('.botao_menos_info').css({'display': 'block'});
 	});
@@ -64,6 +67,7 @@ $(document).ready(function(){
 		$('.video').css({'display': 'block'});
 		$('.info').css({'display': 'block'});
 		$('.letra').css({'display': 'block'});
+		$('.download').css({'display': 'block'});
 		$('.informacoes').css({'display': 'none'});
 		$('.botao_menos_info').css({'display': 'none'});
 	});

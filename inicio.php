@@ -114,73 +114,25 @@ if(isset($_GET['pesquisa']) && $_GET['pesquisa']){
 	else{
 		echo '<div class="letra"><p>Letra não encontrada</p></div>';
 	}
-	
+
 	//exibe o video
-	echo'<div class="video">
-			<iframe width="480" height="300" src="http://www.youtube.com/embed/'.$resultado['video'].'/?autoplay=0">
-			</iframe>
-		</div>
-		<div class="info">'.
+	if(isset($resultado['video']) && $resultado['video']){
+		echo'<div class="video">
+				<iframe width="480" height="300" src="http://www.youtube.com/embed/'.$resultado['video'].'/?autoplay=0">
+				</iframe>
+			</div>
+			<div class="download">
+				<a href="http://keepvid.com/?url=http://www.youtube.com/watch?v='.$resultado['video'].'" target="_blank">Download Video</a>
+				<a href="http://snipmp3.com/?url=http://www.youtube.com/watch?v='.$resultado['video'].'" target="_blank">Download Música</a>
+			</div>';
+	}
+	else echo '<div class="video">Nenhum Video Encontrado</div>';
+							
+	echo '<div class="info">'.
 			$resultado['info']['sumario'].'
 			<div id="mais_informacao">Mais &gt;&gt;</div>
 		</div>
 	</div>';
-	
-	
-	
-	
-	/*
-	//tela com traducao
-	if(isset($_GET['traducao']) && $_GET['traducao'] && isset($resultado['letra']['traducao'])){
-		echo '<div class="letra_r"><p>['.$resultado['letra']['musica'].']</p><p>&nbsp;</p>';
-		
-		$i = 1;
-		//mostra a letra original
-		foreach($resultado['letra']['letra'] as $value){
-			if($value) echo '<p>'.$value.'</p>';
-			else echo '<p>&nbsp;</p>';
-			$i++;
-		}
-		
-		echo'</div><div class="traducao">';
-		
-		//mostra a traducao da letra
-		foreach($resultado['letra']['traducao'] as $key=>$value){
-			if($key == 1 && $value){
-				echo '<p>&nbsp;</p>';
-				$i--;
-			}
-			if($value) echo '<p>'.$value.'</p>';
-			else echo '<p>&nbsp;</p>';
-			if(!$i) break;
-			$i--;
-		}
-		
-		echo '</div>';
-	}
-	else{ //tela sem traducao
-		echo '<div class="letra_l"><p>['.$resultado['letra']['musica'].']</p><p>&nbsp;</p>';
-		
-		//mostra a letra
-		if(isset($resultado['letra']['letra'])){
-			foreach($resultado['letra']['letra'] as $value){
-				if($value) echo '<p>'.$value.'</p>';
-				else echo '<p>&nbsp;</p>';
-			}
-		}
-		
-		//exibe o video
-		echo'</div>
-			<div class="video">
-				<iframe width="480" height="300" src="http://www.youtube.com/embed/'.$resultado['video'].'/?autoplay=0&enablejsapi=1&playerapiid=video"">
-				</iframe>
-			</div>
-			<div class="info">'.
-				$resultado['info']['sumario'].'
-				<div>Mais >></div>
-			</div>';
-	}	
-	*/
 }
 else{ //primeira tela de pesquisa
 ?>

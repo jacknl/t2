@@ -142,10 +142,9 @@ function getletra($banda, $musica){
 			//quebra por linha
 			$tmp['letra'] = explode('\n', $tmp['letra']);
 			//converte para ISO-8859-1
-			foreach($tmp['letra'] as $key=>$value){
-				if($value) $tmp['letra'][$key] = utf8_decode(json_decode('"'.$value.'"'));
-			}
-			//pega traducao da musica, cos tiver
+			foreach($tmp['letra'] as $key=>$value) if($value) $tmp['letra'][$key] = utf8_decode(json_decode('"'.$value.'"'));
+			
+			//pega traducao da musica, caso tiver
 			if(isset($dados->mus[0]->translate[0]->text)){
 				
 				/* Objetivo: pegar cada linha da letra e gravar em uma pposicao da array
@@ -168,9 +167,7 @@ function getletra($banda, $musica){
 				//quebra por linha
 				$tmp['traducao'] = explode('\n', $tmp['traducao']);
 				//converte para ISO-8859-1
-				foreach($tmp['traducao'] as $key=>$value){
-					if($value) $tmp['traducao'][$key] = utf8_decode(json_decode('"'.$value.'"'));
-				}
+				foreach($tmp['traducao'] as $key=>$value) if($value) $tmp['traducao'][$key] = utf8_decode(json_decode('"'.$value.'"'));
 			}
 		}
 	}

@@ -7,8 +7,8 @@
 		return;
 	}
 	
-	$login = htmlentities($_POST['login']);
-	$senha = md5($_POST['senha']).md5('HB9hhf87fgsaf87gfk');
+	$login = addslashes(htmlentities($_POST['login']));
+	$senha = md5($_POST['senha']).'skdjr8ei3ID83H@&$)xl!sxp@./+=sjS';
 	$con = db::connect();
 	
 	if(is_int($con)){

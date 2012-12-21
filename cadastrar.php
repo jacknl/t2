@@ -7,6 +7,7 @@
 	if(!isset($_POST["recaptcha_response_field"])){
 		pegaValores();
 		header('Location: cadastro.php?status=405');
+		return;
 	}
 
 	//$privatekey = '6Lchf9oSAAAAALHO7I8EE_o--8rP_ZeXA9D8DGFI'; //localhost
@@ -26,10 +27,10 @@
 				strlen($_POST['login']) <= 32 && strlen($_POST['login']) >= 4 &&
 				strlen($_POST['email']) >= 10 && strlen($_POST['email']) <= 64
 			){
-				$nome = htmlentities($_POST['nome']);
-				$login = htmlentities($_POST['login']);
-				$senha = md5($_POST['senha1']).md5('HB9hhf87fgsaf87gfk');
-				$email = htmlentities($_POST['email']);
+				$nome = addslashes(htmlentities($_POST['nome']));
+				$login = addslashes(htmlentities($_POST['login']));
+				$senha = md5($_POST['senha1']).'skdjr8ei3ID83H@&$)xl!sxp@./+=sjS';
+				$email = addslashes(htmlentities($_POST['email']));
 				
 				$con = db::connect();
 				if(is_int($con)) header('Location: cadastro.php?status='.$con);
